@@ -1,0 +1,44 @@
+// Global
+// here you can place global styles for the entire project, such as styles for body tags, html tags, and general classes.
+/* Global */
+
+@use "../abstracts/" as *;
+
+:root {
+  --color-primary: #ff6f61;
+  --color-black: #1e2832;
+  --color-white: #ffffff;
+  --color-dark: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+/* Blocks body scrolling when hamburger menu is active */
+.body--lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: clip;
+  & > main {
+    flex-grow: 1;
+  }
+}
+
+[class*="__container"] {
+  max-width: toRem(strip-unit($container));
+  margin: 0 auto;
+  padding-inline: toRem(15);
+}

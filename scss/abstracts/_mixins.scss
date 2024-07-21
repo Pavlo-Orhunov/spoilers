@@ -1,0 +1,32 @@
+// Mixins
+@use "sass:math";
+@use "variables" as *;
+@use "functions" as *;
+
+// @mixin adaptive-units
+// use:    @include adaptive(font-size, 16, 32, 360, 1440);
+// Mixin for adaptive units
+@mixin adaptive(
+  $property,
+  $min-value,
+  $max-value,
+  $min-viewport,
+  $max-viewport
+) {
+  // Calculation of a variable part and constants
+  $variable-part: ($max-value - $min-value) / ($max-viewport - $min-viewport);
+  $constant: ($max-value - $max-viewport * $variable-part) / 16; // Результат в rem
+
+  // Rounding to the right number of signs
+  $constant: round($constant * 1000) / 1000;
+  $variable-part: round($variable-part * 10000) / 100;
+
+  // Result
+  $result: clamp(
+    #{$min-value / 16}rem,
+    #{$constant}rem + #{$variable-part}vw,
+    #{$max-value / 16}rem
+  );
+
+  #{$property}: #{$result};
+}

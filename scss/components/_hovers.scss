@@ -1,0 +1,28 @@
+// Hovers
+@use "../abstracts/" as *;
+
+/* Hovers */
+
+.hover-color {
+  transition: color 0.2s, transform 0.2s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.hover-bg {
+  transition: background-color 0.2s, transform 0.2s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--color-primary);
+    }
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}

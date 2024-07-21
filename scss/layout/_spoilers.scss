@@ -1,0 +1,113 @@
+// hero
+@use "../abstracts/" as *;
+
+.page {
+  // .page__spoilers
+  &__spoilers {
+    padding-bottom: toRem(30);
+  }
+}
+
+.spoilers {
+  // .spoilers__container
+  &__container {
+    & > ul {
+      padding-left: toRem(40);
+      padding-bottom: toRem(20);
+      & li {
+        list-style: disc;
+      }
+    }
+  }
+}
+
+.title {
+  padding-block: toRem(25);
+  font-size: toRem(30);
+  text-align: center;
+}
+
+.subtitle {
+  padding-top: toRem(50);
+  padding-bottom: toRem(15);
+  font-size: toRem(20);
+  text-align: center;
+  font-weight: 600;
+}
+
+summary {
+  padding-top: toRem(10);
+  font-weight: 600;
+  font-style: italic;
+  font-size: toRem(18);
+}
+
+.spoiler-classic {
+  // .spoiler-classic__item
+  &__item {
+  }
+
+  // .spoiler-classic__title
+  &__title {
+  }
+}
+
+.spoiler-accordion {
+  // .spoiler-accordion__item
+  &__item {
+  }
+
+  // .spoiler-accordion__title
+  &__title {
+  }
+}
+
+.menu {
+  // .menu__column
+  &__column {
+  }
+
+  // .menu__title
+  &__title {
+    position: relative;
+    &._active::after {
+      transform: rotate(-180deg);
+      // transform: scale(1, -1);
+    }
+    .menu._init & {
+      font-size: toRem(22);
+      width: 100%;
+      padding-right: toRem(40);
+      text-align: left;
+      &::after {
+        content: "";
+        position: absolute;
+        right: toRem(32);
+        top: toRem(15);
+        width: toRem(20);
+        height: toRem(20);
+        background: url(../../images/arrow.svg) center / contain no-repeat;
+        display: inline-block;
+        transition: transform 0.2s ease;
+      }
+    }
+  }
+
+  // .menu__list
+  &__list {
+  }
+
+  // .menu__item
+  &__item {
+  }
+
+  // .menu__link
+  &__link {
+  }
+}
+
+.faq__spoilers._init .spoilers-faq__title::after {
+}
+.spoilers-faq__title._active::after {
+  transform: rotate(-180deg);
+}

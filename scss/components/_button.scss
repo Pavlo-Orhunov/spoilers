@@ -1,0 +1,27 @@
+// Button
+@use "../abstracts/" as *;
+
+/* Button */
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: toRem(8);
+  padding: toRem(21) toRem(26);
+  font-size: toRem(29);
+  line-height: 1;
+  color: var(--color-white);
+  text-transform: capitalize;
+  background-color: var(--color-black);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--color-primary);
+    }
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Spoilers</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header"></header>
+    <main class="page">
+      <section class="page__spoilers spoilers">
+        <div class="spoilers__container">
+          <h1 class="title">
+            Спойлери - класичні та акордеон (в цьому прикладі з'являються на
+            екранах менше 768px)
+          </h1>
+          <p>
+            Для батьківського контейнера слойлерів пишемо
+            <b>(дивись index.html)</b>:
+          </p>
+          <ul>
+            <li>атрибут <b>data-spoilers</b> - для спойлерів</li>
+            <li>
+              атрибут <b>data-one-spoiler</b> - його необхідно додати до
+              data-spoilers, щоб отримати ефект акордеону
+            </li>
+            <li>
+              data-spoilers<b>="992,max"</b> - тільки на екранах менше або
+              дорівнює 992px
+            </li>
+            <li>
+              data-spoilers=<b>"768,min"</b> - тільки на екранах більше або
+              дорівнює 768px
+            </li>
+            <li>
+              Для заголовків слойлерів вказуємо атрибут <b>data-spoiler</b>.
+            </li>
+            <li>
+              Під заголовком (summary) розміщується блок із вмістом
+              (контентом) спойлера.
+            </li>
+          </ul>
+          <h2 class="subtitle">
+            Звичайні класичні спойлери, коли всі спойлери можна залишити
+            розгорнутими одночасно
+          </h2>
+          <div data-spoilers="768,max" class="spoiler-classic">
+            <details class="spoiler-classic__item">
+              <summary data-spoiler class="spoiler-classic__title">
+                Класичний спойлер-1
+              </summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos minima, dicta pariatur expedita autem, cum impedit
+                laborum magnam veritatis, laudantium fuga repudiandae
+                asperiores iste facilis dolore doloribus ducimus eos et culpa.
+                Dolore quae magni debitis maxime cupiditate, laudantium
+                quibusdam provident, adipisci quis reprehenderit eum
+                voluptatibus ut sequi similique inventore? Ratione.
+              </p>
+            </details>
+            <details class="spoiler-classic__item">
+              <summary data-spoiler class="spoiler-classic__title">
+                Класичний спойлер-2
+              </summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos minima, dicta pariatur expedita autem, cum impedit
+                laborum magnam veritatis, laudantium fuga repudiandae
+                asperiores iste facilis dolore doloribus ducimus eos et culpa.
+                Dolore quae magni debitis maxime cupiditate, laudantium
+                quibusdam provident, adipisci quis reprehenderit eum
+                voluptatibus ut sequi similique inventore? Ratione.
+              </p>
+            </details>
+            <details class="spoiler-classic__item">
+              <summary data-spoiler class="spoiler-classic__title">
+                Класичний спойлер-3
+              </summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos minima, dicta pariatur expedita autem, cum impedit
+                laborum magnam veritatis, laudantium fuga repudiandae
+                asperiores iste facilis dolore doloribus ducimus eos et culpa.
+                Dolore quae magni debitis maxime cupiditate, laudantium
+                quibusdam provident, adipisci quis reprehenderit eum
+                voluptatibus ut sequi similique inventore? Ratione.
+              </p>
+            </details>
+          </div>
+          <h2 class="subtitle">
+            Спойлери типу Акордеон, коли при натисканні на один спойлер, інший
+            відкритий закривається
+          </h2>
+          <div data-spoilers="768,max" data-one-spoiler class="spoiler-accordion">
+            <details class="spoiler-accordion__item">
+              <summary data-spoiler class="spoiler-accordion__title">
+                Cпойлер типу Аккордеон-1
+              </summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos minima, dicta pariatur expedita autem, cum impedit
+                laborum magnam veritatis, laudantium fuga repudiandae
+                asperiores iste facilis dolore doloribus ducimus eos et culpa.
+                Dolore quae magni debitis maxime cupiditate, laudantium
+                quibusdam provident, adipisci quis reprehenderit eum
+                voluptatibus ut sequi similique inventore? Ratione.
+              </p>
+            </details>
+            <details class="spoiler-accordion__item">
+              <summary data-spoiler class="spoiler-accordion__title">
+                Cпойлер типу Аккордеон-2
+              </summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos minima, dicta pariatur expedita autem, cum impedit
+                laborum magnam veritatis, laudantium fuga repudiandae
+                asperiores iste facilis dolore doloribus ducimus eos et culpa.
+                Dolore quae magni debitis maxime cupiditate, laudantium
+                quibusdam provident, adipisci quis reprehenderit eum
+                voluptatibus ut sequi similique inventore? Ratione.
+              </p>
+            </details>
+            <details class="spoiler-accordion__item">
+              <summary data-spoiler class="spoiler-accordion__title">
+                Cпойлер типу Аккордеон-3
+              </summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos minima, dicta pariatur expedita autem, cum impedit
+                laborum magnam veritatis, laudantium fuga repudiandae
+                asperiores iste facilis dolore doloribus ducimus eos et culpa.
+                Dolore quae magni debitis maxime cupiditate, laudantium
+                quibusdam provident, adipisci quis reprehenderit eum
+                voluptatibus ut sequi similique inventore? Ratione.
+              </p>
+            </details>
+          </div>
+          <h2 class="subtitle">Приклад меню</h2>
+          <div data-spoilers="768,max" class="menu">
+            <details class="menu__column">
+              <summary data-spoiler class="menu__title">Menu Title-1</summary>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#!" class="menu__link">Menu Item-1</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link">Menu Item-2</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link">Menu Item-3</a>
+                </li>
+              </ul>
+            </details>
+            <details class="menu__column">
+              <summary data-spoiler class="menu__title">Menu Title-2</summary>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#!" class="menu__link">Menu Item-1</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link">Menu Item-2</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link">Menu Item-3</a>
+                </li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+// Card
+@use "../abstracts/" as *;
+
+/* Tags */
+.tags-card {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(10);
+  // .tags-card__tag
+  &__tag {
+    padding: toRem(4) toRem(12);
+    font-size: toRem(12);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-white);
+    &--hot {
+      background-color: var(--color-primary);
+    }
+    &--sale {
+      background-color: var(--color-black);
+    }
+    &--new {
+      color: var(--color-primary);
+      background-color: var(--color-black);
+    }
+  }
+}
+// H T M L
+//
+// <ul class="tags-card">
+//   <li class="tags-card__tag tags-card__tag--hot">hot</li>
+//   <li hidden class="tags-card__tag tags-card__tag--sale">sale</li>
+//   <li class="tags-card__tag tags-card__tag--new">new</li>
+// </ul>

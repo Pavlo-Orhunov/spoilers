@@ -1,0 +1,42 @@
+// Functions
+@use "sass:math";
+@use "variables" as *;
+
+// A function to translate into Rem
+@function toRem($value) {
+  @return $value / 16 + 0rem;
+}
+
+// A function to translate into EM
+@function toEm($value) {
+  @return $value / 16 + 0em;
+}
+
+// A function to remove units of measurement
+@function strip-unit($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Function to calculate the value using Clamp ()
+@function clamped($min-value, $max-value) {
+  // Variables with Viewport values
+  $min-viewport: strip-unit($mobile-min);
+  $max-viewport: strip-unit($container);
+
+  // Calculation of a variable part and constants
+  $variable-part: ($max-value - $min-value) / ($max-viewport - $min-viewport);
+  $constant: ($max-value - $max-viewport * $variable-part) / 16;
+
+  // Rounding to the required number of characters after a comma
+  $constant: round($constant * 1000) / 1000;
+  $variable-part: round($variable-part * 10000) / 100;
+
+  // Result
+  $result: clamp(
+    #{$min-value / 16}rem,
+    #{$constant}rem + #{$variable-part}vw,
+    #{$max-value / 16}rem
+  );
+
+  @return $result;
+}
