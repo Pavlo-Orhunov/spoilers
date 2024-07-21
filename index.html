@@ -19,6 +19,9 @@
             екранах менше 768px)
           </h1>
           <p>
+            Скріпт для слойлерів дивимось у <b>script.js</b>
+          </p>
+          <p>
             Для батьківського контейнера слойлерів пишемо
             <b>(дивись index.html)</b>:
           </p>
@@ -43,6 +46,9 @@
               Під заголовком (summary) розміщується блок із вмістом
               (контентом) спойлера.
             </li>
+            <li>
+              Якщо потрібно мати якийсь спойлер одразу відкритим, додаємо до summary клас _active.
+            </li>
           </ul>
           <h2 class="subtitle">
             Звичайні класичні спойлери, коли всі спойлери можна залишити
@@ -50,7 +56,7 @@
           </h2>
           <div data-spoilers="768,max" class="spoiler-classic">
             <details class="spoiler-classic__item">
-              <summary data-spoiler class="spoiler-classic__title">
+              <summary data-spoiler class="spoiler-classic__title _active">
                 Класичний спойлер-1
               </summary>
               <p>
