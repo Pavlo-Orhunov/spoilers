@@ -147,6 +147,7 @@ body {
 /* Header */
 .page__spoilers {
   padding-bottom: 1.875rem;
+  line-height: 1.75;
 }
 
 .spoilers__container > ul {
@@ -155,6 +156,17 @@ body {
 }
 .spoilers__container > ul li {
   list-style: disc;
+}
+
+.announce {
+  padding-top: 1.875rem;
+  font-size: 1.375rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+a {
+  text-decoration: underline;
 }
 
 .title {
@@ -176,6 +188,10 @@ summary {
   font-weight: 600;
   font-style: italic;
   font-size: 1.125rem;
+}
+
+.spoiler-in-spoiler {
+  padding-left: 3.125rem;
 }
 
 .menu__title {

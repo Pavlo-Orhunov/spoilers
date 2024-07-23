@@ -5,6 +5,7 @@
   // .page__spoilers
   &__spoilers {
     padding-bottom: toRem(30);
+    line-height: 1.75;
   }
 }
 
@@ -19,6 +20,17 @@
       }
     }
   }
+}
+
+.announce {
+  padding-top: toRem(30);
+  font-size: toRem(22);
+  font-weight: 500;
+  font-style: italic;
+}
+
+a {
+  text-decoration: underline;
 }
 
 .title {
@@ -50,6 +62,9 @@ summary {
   // .spoiler-classic__title
   &__title {
   }
+}
+.spoiler-in-spoiler {
+  padding-left: toRem(50);
 }
 
 .spoiler-accordion {
